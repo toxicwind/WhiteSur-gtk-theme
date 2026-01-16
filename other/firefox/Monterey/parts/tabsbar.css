@@ -9,10 +9,12 @@
 
 #tabbrowser-tabs,
 #tabbrowser-arrowscrollbox {
-  -moz-window-dragging: drag !important;
+	-moz-window-dragging: drag !important;
 }
 
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]):not([orient="vertical"]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]):not([orient="vertical"])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
 	margin-inline-start: 6px !important;
 }
 
@@ -46,11 +48,12 @@
 	background-image: none !important;
 }
 
-.tabbrowser-tab:not([visuallyselected="true"], [multiselected]), .tabbrowser-tab:-moz-lwtheme {
+.tabbrowser-tab:not([visuallyselected="true"], [multiselected]),
+.tabbrowser-tab:-moz-lwtheme {
 	color: var(--gnome-tabbar-tab-color) !important;
 }
 
-.tabbrowser-tab .tab-background:not([selected=true]) {
+.tabbrowser-tab .tab-background:not([selected="true"]) {
 	color: var(--gnome-tabbar-tab-active-color) !important;
 }
 
@@ -64,16 +67,16 @@
 	margin: 0 !important;
 }
 
-.tabbrowser-tab:not([selected=true]) .tab-background {
+.tabbrowser-tab:not([selected="true"]) .tab-background {
 	background: var(--gnome-tabbar-tab-background) !important;
 }
 
-.tabbrowser-tab:not([selected=true]) .tab-background:-moz-window-inactive {
+.tabbrowser-tab:not([selected="true"]) .tab-background:-moz-window-inactive {
 	background: var(--gnome-inactive-tabbar-tab-background) !important;
 }
 
 /* Tab hover */
-.tabbrowser-tab:not([selected=true]):hover .tab-background {
+.tabbrowser-tab:not([selected="true"]):hover .tab-background {
 	background: var(--gnome-tabbar-tab-hover-background) !important;
 }
 
@@ -117,7 +120,7 @@ tab[selected]:-moz-window-inactive .tab-label {
 	border-radius: 3px !important;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	height: 16px;
-	opacity: .3;
+	opacity: 0.3;
 	padding: 0;
 	width: 16px;
 }
@@ -130,7 +133,7 @@ tab[selected]:-moz-window-inactive .tab-label {
 	visibility: visible;
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
-	opacity: .18 !important;
+	opacity: 0.18 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
 	background-color: var(--gnome-button-hover-color) !important;
@@ -147,7 +150,11 @@ tab[selected]:-moz-window-inactive .tab-label {
 }
 
 /* Tab close button etc. positioning */
-.tab-throbber, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-sound, .tab-close-button {
+.tab-throbber,
+.tab-icon-image,
+.tab-sharing-icon-overlay,
+.tab-icon-sound,
+.tab-close-button {
 	margin-top: 0 !important;
 }
 
@@ -170,22 +177,26 @@ tab[selected]:-moz-window-inactive .tab-label {
 }
 
 .button-background {
-  &[type~="icon"]:not(.labelled), &:not(.labelled):has(img) {
-    &[size="small"] {
-      margin-bottom: 3px !important;
-    }
-  }
+	&[type~="icon"]:not(.labelled),
+	&:not(.labelled):has(img) {
+		&[size="small"] {
+			margin-bottom: 3px !important;
+		}
+	}
 }
 
-.tabbrowser-tab .tab-icon-overlay:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+.tabbrowser-tab
+	.tab-icon-overlay:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
 	background-color: transparent !important;
 }
 
-.tabbrowser-tab[selected=true] .tab-icon-overlay:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+.tabbrowser-tab[selected="true"]
+	.tab-icon-overlay:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
 	background-color: transparent !important;
 }
 
-.tabbrowser-tab .tab-icon-overlay:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]):hover {
+.tabbrowser-tab
+	.tab-icon-overlay:not([crashed]):is([soundplaying], [muted], [activemedia-blocked]):hover {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 }
 
@@ -207,8 +218,15 @@ tab[selected]:-moz-window-inactive .tab-label {
 }
 
 /* Tab attention dot */
-.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]), .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]), #firefox-view-button[attention] {
-	background-image: radial-gradient(circle, var(--gnome-tab-attention-icon-color), var(--gnome-tab-attention-icon-color) 2px, transparent 2px) !important;
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]),
+#firefox-view-button[attention] {
+	background-image: radial-gradient(
+		circle,
+		var(--gnome-tab-attention-icon-color),
+		var(--gnome-tab-attention-icon-color) 2px,
+		transparent 2px
+	) !important;
 	background-position: center bottom 3px !important;
 	background-size: 4px 4px;
 	background-repeat: no-repeat;
@@ -252,11 +270,17 @@ tab[selected]:-moz-window-inactive .tab-label {
 }
 
 /* firefox-view-button */
-:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) {
+:root:not([privatebrowsingmode="temporary"]):not([firefoxviewhidden])
+	:is(#firefox-view-button, #wrapper-firefox-view-button) {
 	display: none !important;
 }
 
-:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs, :root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
+:root:not([privatebrowsingmode], [firefoxviewhidden])
+	:is(toolbarbutton, toolbarpaletteitem)
+	+ #tabbrowser-tabs,
+:root[privatebrowsingmode]:not([firefoxviewhidden])
+	:is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button))
+	+ #tabbrowser-tabs {
 	border-inline-start: none !important;
 }
 
@@ -274,10 +298,10 @@ tab[selected]:-moz-window-inactive .tab-label {
 
 /*Tab Group*/
 tab-group {
-  #tabbrowser-tabs[orient="horizontal"] &[collapsed] > .tabbrowser-tab {
-    min-width: 0 !important;
-    max-width: 0 !important;
-    padding: 0;
-    overflow-clip-margin: 0;
-  }
+	#tabbrowser-tabs[orient="horizontal"] &[collapsed] > .tabbrowser-tab {
+		min-width: 0 !important;
+		max-width: 0 !important;
+		padding: 0;
+		overflow-clip-margin: 0;
+	}
 }

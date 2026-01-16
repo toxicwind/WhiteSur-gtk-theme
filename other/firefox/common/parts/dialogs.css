@@ -8,14 +8,15 @@ window {
 
 /* Browser dialog prompts center */
 .dialogOverlay {
-/*	display: grid;*/
+	/*	display: grid;*/
 	place-content: center;
 	justify-content: center;
 	grid-auto-rows: min(90%, var(--doc-height-px));
 }
 
-.dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog), #window-modal-dialog::backdrop {
-	background-color: rgba(0, 0, 0, .5) !important;
+.dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog),
+#window-modal-dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 #window-modal-dialog {
@@ -54,14 +55,17 @@ dialog[subdialog] {
 	margin: 0 !important;
 
 	&:not(.spotlightBox) {
-		box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #000000 !important;
+		box-shadow:
+			0 2px 14px 0 rgba(0, 0, 0, 0.2),
+			0 0 0 1px #000000 !important;
 		border-radius: 12px !important;
 		outline: 1px solid rgba(255, 255, 255, 0.15) !important;
 		outline-offset: -1px;
 	}
 }
 
-.dialogBox window, .dialogBox dialog {
+.dialogBox window,
+.dialogBox dialog {
 	background: none !important;
 }
 
@@ -129,12 +133,15 @@ dialog[subdialog] {
 }
 
 /* Print dialog */
-:root[dialogroot], :host(dialog) {
+:root[dialogroot],
+:host(dialog) {
 	--in-content-page-background: var(--gnome-toolbar-background) !important;
 	--background-color-canvas: var(--gnome-toolbar-background) !important;
 }
 
-browser.printSettingsBrowser, .header-container, .body-container {
+browser.printSettingsBrowser,
+.header-container,
+.body-container {
 	background-color: var(--gnome-toolbar-background) !important;
 }
 
@@ -255,4 +262,3 @@ browser.printSettingsBrowser, .header-container, .body-container {
 :host(dialog) select:not([disabled]):active {
 	background-color: var(--gnome-button-active-background-color) !important;
 }
-

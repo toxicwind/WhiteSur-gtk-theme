@@ -20,7 +20,9 @@
 	transform: translate(15px, 0);
 }
 
-:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:-moz-lwtheme-brighttext:before {
+:root[privatebrowsingmode="temporary"]
+	#nav-bar
+	toolbarspring:first-of-type:-moz-lwtheme-brighttext:before {
 	background-image: url("../icons/user-not-tracked-dark.svg");
 }
 

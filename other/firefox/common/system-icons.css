@@ -7,7 +7,8 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--gnome-icons-hack-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(200%);
+		--gnome-icons-hack-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%)
+			brightness(200%);
 		--gnome-window-icons-hack-filter: invert(90%);
 	}
 }
@@ -40,7 +41,7 @@
 	}
 
 	/* Toolbars close button */
-	.close-icon:not(.tab-close-button) {	
+	.close-icon:not(.tab-close-button) {
 		list-style-image: url("moz-icon://stock/window-close-symbolic?size=dialog") !important;
 	}
 	.close-icon:not(.tab-close-button) image {
@@ -163,13 +164,13 @@
 		list-style-image: url("moz-icon://stock/pan-down-symbolic?size=dialog") !important;
 	}
 
-	/* Context back button */	
-	#context-back .menu-iconic-icon { 
+	/* Context back button */
+	#context-back .menu-iconic-icon {
 		filter: var(--gnome-icons-hack-filter);
 		list-style-image: url("moz-icon://stock/go-previous-symbolic?size=dialog") !important;
 	}
-	/* Context forward button */	
-	#context-forward .menu-iconic-icon { 
+	/* Context forward button */
+	#context-forward .menu-iconic-icon {
 		filter: var(--gnome-icons-hack-filter);
 		list-style-image: url("moz-icon://stock/go-next-symbolic?size=dialog") !important;
 	}
@@ -200,4 +201,3 @@
 		list-style-image: url("moz-icon://stock/edit-paste-symbolic?size=dialog") !important;
 	}
 }
-

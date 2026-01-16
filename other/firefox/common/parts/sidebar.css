@@ -1,6 +1,7 @@
 /* Sidebar */
 #sidebar-main,
-#sidebar-box, #sidebar,
+#sidebar-box,
+#sidebar,
 .sidebar-panel[lwt-sidebar] {
 	color: var(--gnome-toolbar-color) !important;
 	background: var(--gnome-sidebar-background) !important;
@@ -15,10 +16,12 @@
 		outline: none !important;
 		box-shadow: none !important;
 	}
-	
+
 	#sidebar {
 		border-radius: 12px !important;
-		box-shadow: var(--gnome-popover-shadow), 0 0 0 1px var(--gnome-popover-border-color) !important;
+		box-shadow:
+			var(--gnome-popover-shadow),
+			0 0 0 1px var(--gnome-popover-border-color) !important;
 		border: 1px solid rgba(255, 255, 255, 0.06) !important;
 		color: var(--gnome-toolbar-color) !important;
 		background: var(--gnome-menu-background) !important;
@@ -42,9 +45,9 @@
 }
 
 fxview-search-textbox {
-  &::part(input) {
-    border: var(--sidebar-box-border) !important;
-  }
+	&::part(input) {
+		border: var(--sidebar-box-border) !important;
+	}
 }
 
 #sidebar-header {

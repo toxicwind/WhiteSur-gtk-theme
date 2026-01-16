@@ -24,13 +24,13 @@
 	width: 98.5%;
 	max-width: 800px;
 	height: 30px !important;
-	background-color: rgba(20,20,20,0.8) !important;
+	background-color: rgba(20, 20, 20, 0.8) !important;
 }
 
 .controlBar > .button:enabled:hover {
 	fill: #ccc !important;
 }
-  
+
 .controlBar > .button:enabled:hover:active {
 	fill: #bbb !important;
 }
@@ -42,8 +42,6 @@
 .playButton {
 	scale: 0.8;
 }
-  
-
 
 /** Vertical Volume Bar **/
 /* I'm to stupid to get this working. Wasn't able to set proper position relative to mute button */

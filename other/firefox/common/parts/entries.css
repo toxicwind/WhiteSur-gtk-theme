@@ -58,11 +58,13 @@ search-textbox:focus,
 }
 
 /* Entries fixes */
-#urlbar-container, #search-container {
+#urlbar-container,
+#search-container {
 	padding: 0 !important;
 	margin: 0 3px !important;
 }
-#urlbar, #searchbar {
+#urlbar,
+#searchbar {
 	margin: 0 3px !important;
 	padding: 0 !important;
 }

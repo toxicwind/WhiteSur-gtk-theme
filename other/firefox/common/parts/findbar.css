@@ -29,7 +29,8 @@ hbox[anonid="findbar-textbox-wrapper"] {
 	display: flex !important;
 }
 
-.findbar-find-status, .found-matches {
+.findbar-find-status,
+.found-matches {
 	order: -1;
 	padding: 7px 0;
 }
@@ -85,7 +86,11 @@ hbox[anonid="findbar-textbox-wrapper"] {
 	-moz-outline-radius: 8px 0 0 8px !important;
 }
 
-.findbar-highlight, .findbar-case-sensitive, .findbar-match-diacritics, .findbar-entire-word, .findbar-label {
+.findbar-highlight,
+.findbar-case-sensitive,
+.findbar-match-diacritics,
+.findbar-entire-word,
+.findbar-label {
 	margin: 0 3px !important;
 	font-size: 0.9em !important;
 }
@@ -102,7 +107,8 @@ hbox[anonid="findbar-textbox-wrapper"] {
 		right: 0;
 		transform: none;
 	}
-	.findbar-find-status, .found-matches {
+	.findbar-find-status,
+	.found-matches {
 		order: 0;
 	}
 }
